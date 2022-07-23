@@ -52,6 +52,13 @@ app.use("/admin", require("./routes/auth/adminRoute"));
 app.use("/products", require("./routes/product/productRoute"));
 app.use("/cart", require("./routes/product/cartRoute"));
 
+// Services [Newsletter: - WorkingFine, Order: - Working Fine]
+app.use("/newsletter", require("./routes/services/newsLetterRoute"));
+app.use("/order", require("./routes/services/orderRoute"));
+
+// Payment Gateway
+app.use("/payment", require("./routes/payment/payment"));
+
 // Node Error Handler
 app.use(notFound);
 app.use(errorHandler);
