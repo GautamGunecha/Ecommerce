@@ -48,6 +48,10 @@ app.get("/", (req, res) =>
 app.use("/user", require("./routes/auth/userRoute"));
 app.use("/admin", require("./routes/auth/adminRoute"));
 
+// Products [Products:- Working Fine, Cart:-  ]
+app.use("/products", require("./routes/product/productRoute"));
+app.use("/cart", require("./routes/product/cartRoute"));
+
 // Node Error Handler
 app.use(notFound);
 app.use(errorHandler);
