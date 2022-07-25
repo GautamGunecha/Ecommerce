@@ -1,0 +1,124 @@
+.registerHeader {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.registerHeaderLogo p {
+  font-size: 18px;
+  font-family: monospace;
+}
+
+.registerHeaderLogo p:hover {
+  cursor: pointer;
+  color: rgb(68, 175, 82);
+}
+
+.registerAuth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.registerAuth p {
+  font-size: 10px;
+}
+
+.registerAuth button {
+  padding: 5px;
+  background-color: transparent;
+  border: 1px solid rgb(190, 188, 188);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.registerAuth button:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* -- Form Setup -- */
+
+.registrationForm {
+  margin: 5% auto;
+  width: 25%;
+  padding: 20px;
+  box-shadow: 1px 2px 4px 2px #bebdbd;
+}
+
+.registrationFormHeader p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.registrationFormHeader p:hover {
+  cursor: pointer;
+  color: rgb(68, 175, 82);
+}
+
+.registrationCondition {
+  margin-top: 2%;
+}
+
+.registrationCondition p {
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+}
+
+.registrationFormEmail {
+  margin-top: 5%;
+}
+
+.registrationFormName {
+  margin-top: 5%;
+}
+
+.registrationFormPassword {
+  margin-top: 3%;
+}
+
+.registrationFormEmail p,
+.registrationFormPassword p,
+.registrationFormName p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.registrationFormEmail input,
+.registrationFormPassword input,
+.registrationFormName input {
+  margin-top: 2%;
+  padding: 5px;
+  width: 100%;
+}
+
+.registrationSubmitButton {
+  margin-top: 4%;
+  width: 100%;
+  padding: 7px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #161616;
+  background-color: #fff;
+  border: 1px solid rgb(5, 5, 5);
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.registrationSubmitButton:hover {
+  color: rgb(68, 175, 82);
+  border: 1px solid rgb(68, 175, 82);
+}
+
+.registrationFormShowPassword {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.registrationFormShowPasswordIcon {
+  cursor: pointer;
+}

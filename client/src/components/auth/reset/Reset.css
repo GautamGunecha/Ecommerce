@@ -1,0 +1,57 @@
+.resetPassword {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 5% auto;
+}
+
+.resetPassword h1 {
+  font-size: 25px;
+  color: #ff3344;
+  margin-bottom: 3%;
+  font-family: monospace;
+}
+
+.resetPasswordForm {
+  border: 1px solid rgb(201, 196, 196);
+  box-shadow: 1px 2px 4px 2px #bebdbd;
+  padding: 20px;
+}
+
+.resetPasswordForm p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.resetPasswordForm input {
+  width: 100%;
+  padding: 5px;
+}
+
+.resetPasswordForm button {
+  width: 100%;
+  padding: 5px;
+  margin-top: 2%;
+  background-color: #ff3344;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 15px;
+}
+
+.resetTerms {
+  margin-top: 2%;
+}
+
+.resetTerms p {
+  font-size: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+a {
+  font-style: normal;
+  text-decoration: none;
+}

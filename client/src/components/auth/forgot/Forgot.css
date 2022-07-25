@@ -1,0 +1,77 @@
+.forgot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 8% auto;
+}
+
+.forgotPasswordHeader p {
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20%;
+}
+
+.forgotPasswordHeader p:hover {
+  cursor: pointer;
+  color: rgb(68, 175, 82);
+}
+
+.forgotPasswordContainer {
+  border: 1px solid rgb(199, 199, 199);
+  width: 30%;
+  height: auto;
+  padding: 20px;
+  box-shadow: 1px 2px 4px 2px #bebdbd;
+}
+
+.forgotPasswordContainerHeader p {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.forgotPasswordContainerContent p {
+  margin-top: 2%;
+  font-size: 12px;
+  width: 80%;
+  text-align: left;
+}
+
+.forgotPasswordContainerForm {
+  margin-top: 8%;
+}
+
+.forgotPasswordContainerForm p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.forgotPasswordContainerForm input {
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 5px;
+}
+
+.forgotPasswordContainerForm button {
+  width: 100%;
+  padding: 8px;
+  background-color: transparent;
+  border: 1px solid rgb(68, 68, 68);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.forgotPasswordContainerForm button:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.forgotPasswordContainerSignInPage {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(68, 175, 82);
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+}
