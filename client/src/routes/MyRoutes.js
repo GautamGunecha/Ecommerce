@@ -3,6 +3,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { useSelector } from "react-redux";
 import Home from '../components/home/Home'
 import SignIn from '../components/auth/login/SignIn';
+import Registration from '../components/auth/registration/Registration';
+import Reset from '../components/auth/reset/Reset'
+import Forgot from '../components/auth/forgot/Forgot';
 
 const MyRoutes = () =>
 {
@@ -15,6 +18,10 @@ const MyRoutes = () =>
 
                 {/* App Auth */}
                 <Route exact path="/sign-in" element={<SignIn />} />
+                <Route exact path="/register" element={<Registration />} />
+                <Route exact path="/mantra-user-forgot-password" element={<Forgot />} />
+                <Route exact path="/reset/:token" element={<Reset />} />
+
             </Routes>
         </BrowserRouter>
     )
