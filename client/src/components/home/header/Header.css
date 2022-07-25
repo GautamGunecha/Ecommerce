@@ -1,0 +1,66 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 63px;
+}
+
+.headerLogo p {
+    font-size: 18px;
+    font-family: monospace;
+}
+
+.headerLogo p:hover {
+    cursor: pointer;
+    color: rgb(68, 175, 82);
+}
+
+.headerNav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15%;
+}
+
+.headerNav p {
+    color: rgb(63, 60, 60);
+}
+
+.headerNav p:hover {
+    cursor: pointer;
+    color: rgb(68, 175, 82);
+    border-bottom: 1px solid rgb(72, 180, 39);
+    font-weight: 600;
+}
+
+.headerNav p::after {
+    color: rgb(68, 175, 82);
+}
+
+.headerIcons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.headerIcon:hover {
+    cursor: pointer;
+}
+
+.headerIcons img {
+    object-fit: contain;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.heartIcon:hover {
+    color: red;
+}
+
+.shopingCart:hover {
+    color: rgb(72, 180, 39);
+}

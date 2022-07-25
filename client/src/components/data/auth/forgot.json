@@ -1,0 +1,20 @@
+{
+    "branding":{
+        "title":"Mantra."
+    },
+    "header":{
+        "title":"Forgot your password"
+    },
+    "description":{
+        "title":"Please enter the registered email address to receive your password reset link"
+    },
+    "reqData":{
+        "title":"Enter registered email"
+    },
+    "button":{
+        "title":"Request reset link"
+    },
+    "pageRouting":{
+        "title":"Back To Sign-In"
+    }
+}

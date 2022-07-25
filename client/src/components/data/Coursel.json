@@ -1,0 +1,22 @@
+{
+    "delivery":{
+        "id":1,
+        "type":"Free Delivery",
+        "terms":"Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+    },
+    "return":{
+        "id":2,
+        "type":"Free Returns",
+        "terms":"Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+    },
+    "support":{
+        "id":3,
+        "type":"24/7 Customer Support",
+        "terms":"Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+    },
+    "pricing":{
+        "id":4,
+        "type":"Competitive Pricing",
+        "terms":"Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+    }
+}
