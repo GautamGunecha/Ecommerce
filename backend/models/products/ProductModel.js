@@ -22,9 +22,10 @@ const ProductSchema = new Schema(
     },
     size: {
       type: Array,
+      required: true,
     },
     color: {
-      type: String,
+      type: Array,
       required: true,
     },
     price: {
