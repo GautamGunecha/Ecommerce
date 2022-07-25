@@ -2,6 +2,9 @@ import React from 'react'
 import Header from './header/Header'
 import { useLocation } from 'react-router'
 import Hero from './hero/Hero';
+import Coursel from './coursel/Coursel';
+import Newsletter from './newsletter/Newsletter';
+import Footer from './footer/Footer';
 
 const HomePage = () =>
 {
@@ -9,6 +12,9 @@ const HomePage = () =>
         <React.Fragment>
             <Header />
             <Hero />
+            <Coursel />
+            <Newsletter />
+            <Footer />
         </React.Fragment>
     );
 };

@@ -1,0 +1,13 @@
+.unsubscribe {
+    width: 100%;
+    margin-bottom: 7%;
+}
+
+.unsubscribePara {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    max-width: 35%;
+}
