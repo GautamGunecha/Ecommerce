@@ -1,0 +1,24 @@
+.cart {
+  border-top: 1px solid rgb(185, 185, 185);
+}
+
+.cartHeader {
+  margin-top: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cartHeader p {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: monospace;
+}
+
+.cartBottom {
+  width: 100%;
+  border-bottom: 1px solid rgb(185, 185, 185);
+  max-width: 75%;
+  margin: 1% auto;
+}
