@@ -1,12 +1,14 @@
 import React from 'react'
 import Header from './header/Header'
 import { useLocation } from 'react-router'
+import Hero from './hero/Hero';
 
 const HomePage = () =>
 {
     return (
         <React.Fragment>
             <Header />
+            <Hero />
         </React.Fragment>
     );
 };

@@ -1,0 +1,49 @@
+.hero {
+    border-top: 1px solid rgb(189, 185, 185);
+    border-bottom: 1px solid rgb(231, 231, 231);
+    width: 100%;
+    height: 410px;
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heroSale p {
+    font-size: 10px;
+    color: #414040;
+    margin-bottom: 5%;
+}
+
+.heroHeader p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 4%;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.heroContent p {
+    display: flex;
+    margin: 0 auto;
+    width: 50%;
+    font-size: 12px;
+    text-align: left;
+}
+
+.heroShopNow button {
+    width: 140px;
+    padding: 8px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid rgb(80, 80, 80);
+    font-size: 15px;
+    transition: all 0.5s ease;
+    margin-top: 2%;
+}
+
+.heroShopNow button:hover {
+    background-color: #414040;
+    color: #ffffff;
+}
