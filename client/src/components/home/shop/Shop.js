@@ -10,8 +10,8 @@ const Shop = () =>
             <div className='shop'>
                 <h1>Shop</h1>
             </div>
-            <Mens />
-            <Womens />
+            <Mens title={'Mens'} />
+            <Womens title={'Womens'} />
         </>
     )
 }

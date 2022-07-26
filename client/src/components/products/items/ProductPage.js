@@ -5,17 +5,27 @@ import { useParams } from 'react-router-dom'
 import "./ProductPage.css"
 import axios from 'axios'
 import { url } from '../../../redux/utils/url'
+import Mens from '../../home/shop/mens/Mens'
+import Womens from '../../home/shop/womens/Womens'
 
 
 const ProductPage = () =>
 {
     let { productID } = useParams()
     const [product, setProduct] = useState([])
+    const [show, setShow] = useState(false)
 
     const fetchProduct = async () =>
     {
         await axios.get(`${url}/products/getproduct/${productID}`)
-            .then(res => setProduct(res.data))
+            .then(res =>
+            {
+                setProduct(res.data)
+                if (res.data.categories[0] === 'mens')
+                {
+                    setShow(false)
+                } else { setShow(true) }
+            })
             .catch(err => setProduct([]))
     }
 
@@ -40,9 +50,10 @@ const ProductPage = () =>
                     <span className='productPageFunctions'>
                         <button>Add To Cart</button>
                     </span>
-                    <p className='productColor'>Color Shown - <span>{product.color[0]}</span></p>
+                    <p className='productColor'>Color Shown - <span>{product.color}</span></p>
                 </section>
             </div>
+            {show ? <Mens title={'Options For him'} /> : <Womens title={'Options For her'} />}
             <Footer />
         </>
     )
