@@ -9,9 +9,7 @@ import Forgot from '../components/auth/forgot/Forgot';
 import Profile from '../components/user/profile/Profile'
 import Unsubscribe from '../components/home/newsletter/unsubscribe/Unsubscribe'
 import Cart from '../components/cart/Cart';
-import Shop from '../components/products/shop/Shop'
-import Men from '../components/products/men/Men'
-import Women from '../components/products/women/Women'
+import ProductPage from '../components/products/items/ProductPage';
 
 const MyRoutes = () =>
 {
@@ -23,10 +21,6 @@ const MyRoutes = () =>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/mantra-shoping-cart" element={<Cart />} />
 
-                {/* Store Routes */}
-                <Route exact path="/shop" element={<Shop />} />
-                <Route exact path="/men" element={<Men />} />
-                <Route exact path="/women" element={<Women />} />
 
                 {/* App Auth */}
                 <Route exact path="/sign-in" element={<SignIn />} />
@@ -39,6 +33,9 @@ const MyRoutes = () =>
 
                 {/* Services */}
                 <Route exact path="/unsubscribe/newsletter" element={<Unsubscribe />} />
+
+                {/* Specific Product Page */}
+                <Route path='/product/page/:productID' element={<ProductPage />} />
 
             </Routes>
         </BrowserRouter>

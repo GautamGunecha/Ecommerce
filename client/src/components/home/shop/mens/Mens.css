@@ -1,0 +1,27 @@
+.mensSection {
+    width: 90%;
+    font-family: monospace;
+    font-size: 20px;
+    margin: 1em auto;
+}
+
+.mens-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+}
+
+.mens-category img {
+    width: 100%;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+.mens-img:hover {
+    border: 1px solid green;
+}
+
+.womens-img:hover {
+    border: 1px solid pink;
+}

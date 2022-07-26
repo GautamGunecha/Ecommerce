@@ -5,6 +5,7 @@ import Hero from './hero/Hero';
 import Coursel from './coursel/Coursel';
 import Newsletter from './newsletter/Newsletter';
 import Footer from './footer/Footer';
+import Shop from './shop/Shop';
 
 const HomePage = () =>
 {
@@ -13,6 +14,7 @@ const HomePage = () =>
             <Header />
             <Hero />
             <Coursel />
+            <Shop />
             <Newsletter />
             <Footer />
         </React.Fragment>
