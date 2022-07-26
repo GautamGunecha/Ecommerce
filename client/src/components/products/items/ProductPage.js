@@ -8,7 +8,6 @@ import { url } from '../../../redux/utils/url'
 import Mens from '../../home/shop/mens/Mens'
 import Womens from '../../home/shop/womens/Womens'
 
-
 const ProductPage = () =>
 {
     let { productID } = useParams()
@@ -53,7 +52,7 @@ const ProductPage = () =>
                     <p className='productColor'>Color Shown - <span>{product.color}</span></p>
                 </section>
             </div>
-            {show ? <Mens title={'Options For him'} /> : <Womens title={'Options For her'} />}
+            {show ? <Mens title={'Options For him'} target={"_blank"} /> : <Womens title={'Options For her'} target={"_blank"} />}
             <Footer />
         </>
     )

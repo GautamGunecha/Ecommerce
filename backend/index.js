@@ -17,12 +17,12 @@ const limiter = rateLimit({
     max: 100,
 });
 
+app.use(cors());
 app.use(helmet());
 app.use(xssClean());
 app.use(hpp());
 app.use(mongoSanitize());
 app.use(limiter);
-app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

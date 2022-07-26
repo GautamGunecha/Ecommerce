@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { url } from '../../../../redux/utils/url'
 
-const Womens = ({ title }) =>
+const Womens = ({ title, target }) =>
 {
     const [data, setData] = useState([])
     const fetchData = async () =>
@@ -22,7 +22,7 @@ const Womens = ({ title }) =>
             <p>{title}</p>
             <section className='mens-category'>
                 {data.map(item => (
-                    <Link key={item._id} to={`/product/page/${item._id}`}>
+                    <Link target={target} key={item._id} to={`/product/page/${item._id}`}>
                         <img className='womens-img' src={item.img} alt="" />
                     </Link>
                 ))}

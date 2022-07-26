@@ -4,7 +4,7 @@ import axios from 'axios'
 import { url } from '../../../../redux/utils/url'
 import { Link } from 'react-router-dom'
 
-const Mens = ({ title }) =>
+const Mens = ({ title, target }) =>
 {
     const [data, setData] = useState([])
     const fetchData = async () =>
@@ -23,7 +23,7 @@ const Mens = ({ title }) =>
             <p>{title}</p>
             <section className='mens-category'>
                 {data.map(item => (
-                    <Link key={item._id} to={`/product/page/${item._id}`}>
+                    <Link target={target} key={item._id} to={`/product/page/${item._id}`}>
                         <img className='mens-img' src={item.img} alt={item.title} />
                     </Link>
                 ))}
