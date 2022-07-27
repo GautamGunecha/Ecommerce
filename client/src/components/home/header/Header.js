@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import "./Header.css";
 import { BiCart, BiUser } from "react-icons/bi";
-import { AiOutlineHeart } from "react-icons/ai";
 import { FiLogOut } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import headerData from '../../data/Header.json'
@@ -52,11 +51,7 @@ const Header = () =>
                         </Link>
                     )}
 
-                    {userInfo && (
-                        <Link to={"/wishlist"}>
-                            <AiOutlineHeart size={20} className="headerIcon heartIcon" />
-                        </Link>
-                    )}
+
 
                     {!userInfo && (
                         <Link to={"/sign-in"}>
