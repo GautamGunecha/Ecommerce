@@ -5,6 +5,7 @@ import Header from '../../../home/header/Header'
 import Banner from '../banner/Banner'
 import Mens from '../../../home/shop/mens/Mens'
 import Shoes from './shoes/Shoes'
+import Sunglass from './sunglass/Sunglass'
 
 const Male = () =>
 {
@@ -15,7 +16,7 @@ const Male = () =>
             <Coursel />
             <Mens title={"Men's t-shirts"} />
             <Shoes title={"Men's sneakers"} />
-            <div></div>
+            <Sunglass title={"Men's sunglasses"} />
             <Footer />
         </>
     )
