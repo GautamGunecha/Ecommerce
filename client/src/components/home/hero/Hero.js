@@ -1,10 +1,16 @@
 import React from 'react'
 import './Hero.css'
 import heroData from '../../data/Hero.json'
-import { Link } from 'react-router-dom'
 
 const Hero = () =>
 {
+    const scrollDown = () =>
+    {
+        window.scrollTo({
+            top: 635,
+            behavior: "smooth"
+        })
+    }
     return (
         <React.Fragment>
             <div className='hero'>
@@ -18,9 +24,7 @@ const Hero = () =>
                     <p>{heroData.description.text}</p>
                 </div>
                 <div className='heroShopNow'>
-                    <Link to={heroData.button.link}>
-                        <button>{heroData.button.text}</button>
-                    </Link>
+                    <button onClick={scrollDown}>{heroData.button.text}</button>
                 </div>
             </div>
         </React.Fragment>
