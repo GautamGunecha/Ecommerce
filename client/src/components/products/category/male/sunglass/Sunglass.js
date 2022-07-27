@@ -3,12 +3,12 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { url } from '../../../../../redux/utils/url'
 
-const Sunglass = ({ title, target }) =>
+const Sunglass = ({ title, target, category }) =>
 {
     const [data, setData] = useState([])
     const fetchData = async () =>
     {
-        await axios.get(`${url}/products?category=mens-glass`)
+        await axios.get(`${url}/products?category=${category}`)
             .then(res => setData(res.data))
             .catch(err => setData([]))
     }

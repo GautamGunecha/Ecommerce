@@ -7,6 +7,7 @@ import Mens from '../../../home/shop/mens/Mens'
 import Shoes from './shoes/Shoes'
 import Sunglass from './sunglass/Sunglass'
 
+// mens-shoes
 const Male = () =>
 {
     return (
@@ -15,8 +16,8 @@ const Male = () =>
             <Banner text={"men's collections"} />
             <Coursel />
             <Mens title={"Men's t-shirts"} />
-            <Shoes title={"Men's sneakers"} />
-            <Sunglass title={"Men's sunglasses"} />
+            <Shoes title={"Men's sneakers"} category={'mens-shoes'} />
+            <Sunglass title={"Men's sunglasses"} category={'mens-glass'} />
             <Footer />
         </>
     )

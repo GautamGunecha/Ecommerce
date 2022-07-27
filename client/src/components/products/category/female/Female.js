@@ -4,6 +4,8 @@ import Footer from '../../../home/footer/Footer'
 import Header from '../../../home/header/Header'
 import Banner from '../banner/Banner'
 import Womens from '../../../home/shop/womens/Womens'
+import Shoes from '../male/shoes/Shoes'
+import Sunglass from '../male/sunglass/Sunglass'
 
 const Female = () =>
 {
@@ -13,7 +15,8 @@ const Female = () =>
             <Banner text={"women's collections"} />
             <Coursel />
             <Womens title={"women's t-shirts"} />
-            <div></div>
+            <Shoes title={"Women's sneakers"} category={'womens-shoes'} />
+            <Sunglass title={"Women's sunglasses"} category={'mens-glass'} />
             <Footer />
         </>
     )
