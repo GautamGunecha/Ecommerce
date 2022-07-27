@@ -16,7 +16,7 @@ const Female = () =>
             <Coursel />
             <Womens title={"women's t-shirts"} />
             <Shoes title={"Women's sneakers"} category={'womens-shoes'} />
-            <Sunglass title={"Women's sunglasses"} category={'mens-glass'} />
+            <Sunglass title={"Women's sunglasses"} category={'womens-glass'} />
             <Footer />
         </>
     )
