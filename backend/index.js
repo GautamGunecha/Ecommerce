@@ -41,7 +41,7 @@ mongoose.connect(
 
 app.get("/", (req, res) =>
 {
-    return res.send("Ecommerce Backend Server Connected.");
+    return res.send("Server Connected.");
 });
 
 // Auth [All routes under auth directory working fine.]
