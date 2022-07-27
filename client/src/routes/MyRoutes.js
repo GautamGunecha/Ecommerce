@@ -10,6 +10,8 @@ import Profile from '../components/user/profile/Profile'
 import Unsubscribe from '../components/home/newsletter/unsubscribe/Unsubscribe'
 import Cart from '../components/cart/Cart';
 import ProductPage from '../components/products/items/ProductPage';
+import Male from '../components/products/category/male/Male';
+import Female from '../components/products/category/female/Female';
 
 const MyRoutes = () =>
 {
@@ -20,7 +22,6 @@ const MyRoutes = () =>
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/mantra-shoping-cart" element={<Cart />} />
-
 
                 {/* App Auth */}
                 <Route exact path="/sign-in" element={<SignIn />} />
@@ -36,6 +37,10 @@ const MyRoutes = () =>
 
                 {/* Specific Product Page */}
                 <Route path='/product/page/:productID' element={<ProductPage />} />
+
+                {/* product category */}
+                <Route exact path="/men" element={<Male />} />
+                <Route exact path="/women" element={<Female />} />
 
             </Routes>
         </BrowserRouter>

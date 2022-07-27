@@ -2,26 +2,21 @@
     "Brand": {
         "Title": "Mantra"
     },
-    "Navbar":[
+    "Navbar": [
         {
-            "id":1,
-            "title":"Home",
-            "link":""
+            "id": 1,
+            "title": "Home",
+            "link": "/"
         },
         {
-            "id":2,
-            "title":"Shop",
-            "link":"shop"
+            "id": 2,
+            "title": "Men",
+            "link": "/men"
         },
         {
-            "id":3,
-            "title":"Mens",
-            "link":"men"
-        },
-        {
-            "id":4,
-            "title":"Womens",
-            "link":"women"
+            "id": 3,
+            "title": "Women",
+            "link": "/women"
         }
     ]
 }

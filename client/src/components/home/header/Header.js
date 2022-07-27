@@ -26,18 +26,18 @@ const Header = () =>
         <React.Fragment>
             <div className="header">
                 <div className="headerLogo">
-                    <a href={`http://localhost:3000`}>
+                    <Link to='/'>
                         <p>{headerData.Brand.Title}</p>
-                    </a>
+                    </Link>
                 </div>
                 <div className="headerNav">
                     {headerData.Navbar.map((navLinks) => (
-                        <a
+                        <Link
                             key={navLinks.id}
-                            href={`http://localhost:3000/${navLinks.link}`}
+                            to={`${navLinks.link}`}
                         >
                             <p>{navLinks.title}</p>
-                        </a>
+                        </Link>
                     ))}
                 </div>
                 <div className="headerIcons">
