@@ -11,7 +11,8 @@ import Womens from '../../home/shop/womens/Womens'
 const ProductPage = () =>
 {
     let { productID } = useParams()
-    const [product, setProduct] = useState([])
+    const [product, setProduct] = useState({})
+    const [size, setSize] = useState([])
     const [show, setShow] = useState(false)
 
     const fetchProduct = async () =>
@@ -20,13 +21,15 @@ const ProductPage = () =>
             .then(res =>
             {
                 setProduct(res.data)
+                setSize(res.data.size)
                 if (res.data.categories[0] === 'mens')
                 {
                     setShow(false)
                 } else { setShow(true) }
             })
-            .catch(err => setProduct([]))
+            .catch(err => setProduct({}))
     }
+
 
     useEffect(() =>
     {
@@ -44,7 +47,9 @@ const ProductPage = () =>
                     <p className='productPagePricing'>₹ {product.price}</p>
                     <span className='productPageSize'>
                         <p>Size Available</p>
-                        <select></select>
+                        <select>
+                            {size.map((item, key) => (<option key={key} value={item}>{item}</option>))}
+                        </select>
                     </span>
                     <span className='productPageFunctions'>
                         <button>Add To Cart</button>
