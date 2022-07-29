@@ -5,6 +5,7 @@ import "./Profile.css";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { updateProfile } from "../../../redux/actions/auth/authAction";
+import Orders from "../orders/Orders";
 
 const Profile = () =>
 {
@@ -123,6 +124,7 @@ const Profile = () =>
         </div>
         <h1>Order History</h1>
       </div>
+      <Orders />
       <Footer />
     </React.Fragment>
   );

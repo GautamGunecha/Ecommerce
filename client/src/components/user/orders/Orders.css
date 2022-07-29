@@ -1,0 +1,31 @@
+.userOrders,
+.noOrders {
+    width: 75%;
+    border: 1px solid #ccc;
+    margin: 1em auto;
+    padding: 15px;
+}
+
+.noOrders {
+    margin-bottom: 10em;
+}
+
+.noOrders h1 {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.userOrders p {
+    font-family: monospace;
+    margin-bottom: .5em;
+    font-size: 15px;
+}
+
+.userOrders button {
+    padding: 8px;
+    cursor: pointer;
+    background-color: black;
+    color: #fff;
+    border: none;
+}
