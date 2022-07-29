@@ -55,7 +55,7 @@ const ProductPage = () =>
     useEffect(() =>
     {
         fetchProduct()
-    }, [])
+    }, [productID])
 
     return (
         <>
@@ -94,7 +94,7 @@ const ProductPage = () =>
                     <p className='productColor'>Color Shown - <span>{product.color}</span></p>
                 </section>
             </div >
-            {show ? <Mens title={'Options For him'} target={"_blank"} /> : <Womens title={'Options For her'} target={"_blank"} />}
+            {show ? <Mens title={'Options For him'} /> : <Womens title={'Options For her'} />}
             <Footer />
         </>
     )

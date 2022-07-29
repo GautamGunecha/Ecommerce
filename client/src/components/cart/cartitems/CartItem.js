@@ -13,7 +13,9 @@ const CartItem = () =>
 {
     const userLogin = useSelector((state) => state.userLogin);
     const { userInfo } = userLogin;
+
     const cartItems = useSelector(state => state.cart.cartItems)
+
     const [subTotal, setSubTotal] = useState()
     const [total, setTotal] = useState()
     const [stripeToken, setStripeToken] = useState(null);
@@ -67,7 +69,16 @@ const CartItem = () =>
                 .then(res =>
                 {
                     dispatch(emptyUserCart())
-                    navigate('/success')
+                    navigate('/success',
+                        {
+                            state:
+                            {
+                                id: 1,
+                                stripeData: res.data,
+                                products: cartItems,
+                                total
+                            }
+                        })
                 })
                 .catch(err => console.log(err))
         }
