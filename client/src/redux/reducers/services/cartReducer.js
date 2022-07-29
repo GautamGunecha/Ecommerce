@@ -8,13 +8,13 @@ export const cartReducer = (state = initialState, action) =>
     {
         case actionTypes.ADD_TO_CART:
             const product = action.payload
-            const ifProduct = state.cartItems.find((item) => item.id === product._id)
+            const ifProduct = state.cartItems.find((item) => item.id === product.id)
 
             if (ifProduct)
             {
                 return {
                     ...state,
-                    cartItems: state.cartItems.map((x) => x.id === ifProduct._id ? product : x)
+                    cartItems: state.cartItems.map((x) => x.id === ifProduct.id ? product : x)
                 }
             } else
             {

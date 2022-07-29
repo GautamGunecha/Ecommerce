@@ -8,6 +8,9 @@ import { url } from '../../../redux/utils/url'
 import Mens from '../../home/shop/mens/Mens'
 import Womens from '../../home/shop/womens/Womens'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
+import { useDispatch } from "react-redux";
+import { addToCart } from '../../../redux/actions/services/cartAction'
+import { ToastContainer, toast } from 'react-toastify';
 
 const ProductPage = () =>
 {
@@ -16,6 +19,8 @@ const ProductPage = () =>
     const [show, setShow] = useState(false)
     const [size, setSize] = useState("")
     const [quantity, setQuantity] = useState(1)
+
+    const dispatch = useDispatch()
 
     const fetchProduct = async () =>
     {
@@ -40,6 +45,13 @@ const ProductPage = () =>
         if (count === "dec" && quantity > 1) setQuantity(quantity - 1)
     }
 
+    const handleAddToCart = (id, qnty, size) =>
+    {
+        dispatch(addToCart(id, qnty, size))
+        setQuantity(1)
+        toast.success('Product added to cart!')
+    }
+
     useEffect(() =>
     {
         fetchProduct()
@@ -47,6 +59,7 @@ const ProductPage = () =>
 
     return (
         <>
+            <ToastContainer autoClose={1000} />
             <Header />
             <div className='productPage'>
                 <img src={product.img} alt={product.title} />
@@ -76,7 +89,7 @@ const ProductPage = () =>
                                 onClick={() => handleQuantity("add")}
                             />
                         </span>
-                        <button>Add To Basket</button>
+                        <button onClick={() => handleAddToCart(productID, quantity, size)}>Add To Basket</button>
                     </div>
                     <p className='productColor'>Color Shown - <span>{product.color}</span></p>
                 </section>
