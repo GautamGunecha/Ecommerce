@@ -5,11 +5,14 @@ import { removeFromCart } from '../../../redux/actions/services/cartAction'
 
 const CartItem = () =>
 {
+    const userLogin = useSelector((state) => state.userLogin);
+    const { userInfo } = userLogin;
     const cartItems = useSelector(state => state.cart.cartItems)
     const [subTotal, setSubTotal] = useState()
     const [total, setTotal] = useState()
 
     const dispatch = useDispatch()
+
 
     const totalAmount = () =>
     {
@@ -25,6 +28,12 @@ const CartItem = () =>
     const handleRemoveFromCart = (id) =>
     {
         dispatch(removeFromCart(id))
+    }
+
+    const authError = (e) =>
+    {
+        e.preventDefault()
+        alert('SignIn for checkout')
     }
     useEffect(() => { totalAmount() })
     return (
@@ -59,7 +68,10 @@ const CartItem = () =>
                         <p>Discount - 5% on subtotal.</p>
                         <p className='totalAmount'>Total - ₹ {total}.00</p>
                     </section>
-                    <button>Checkout</button>
+                    {!userInfo ?
+                        <button onClick={authError}>Checkout</button> :
+                        <button>Checkout</button>
+                    }
                 </section>
                 : ""}
         </div>
