@@ -15,6 +15,7 @@
     border: 1px solid #ccc;
     padding: 10px;
     flex: .2;
+    height: 17em;
 }
 
 .cartTotal h1 {
@@ -54,4 +55,41 @@
 
 .cartTotal button:hover {
     background-color: rgb(93, 92, 92);
+}
+
+.cartProducts {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1em;
+    gap: 8em;
+    justify-content: flex-start;
+    border-bottom: 1px solid #ccc;
+    font-family: monospace;
+}
+
+.cartProducts img {
+    object-fit: contain;
+    width: 25%;
+    border: 1px solid rgb(31, 218, 31);
+    margin-bottom: 1em;
+}
+
+.cartProducts p {
+    margin-bottom: .9em;
+    font-size: 18px;
+}
+
+.cartProducts button {
+    width: auto;
+    padding: 9px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    transition: 0.5s;
+}
+
+.cartProducts button:hover {
+    background-color: rgb(195, 44, 44);
 }

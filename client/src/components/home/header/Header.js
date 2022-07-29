@@ -9,6 +9,8 @@ import { logout } from '../../../redux/actions/auth/authAction'
 
 const Header = () =>
 {
+    const cartItems = useSelector(state => state.cart.cartItems)
+
     const dispatch = useDispatch();
     const userLogin = useSelector((state) => state.userLogin);
     const { userInfo } = userLogin;
@@ -51,17 +53,18 @@ const Header = () =>
                         </Link>
                     )}
 
-
-
                     {!userInfo && (
                         <Link to={"/sign-in"}>
                             <BiUser size={20} className="headerIcon" />
                         </Link>
                     )}
 
-                    <Link to={"/mantra-shoping-cart"}>
+                    <Link className='cartLength' to={"/mantra-shoping-cart"}>
                         <BiCart size={20} className="headerIcon shopingCart" />
+                        {cartItems.length !== 0 && <p>{cartItems.length}</p>}
                     </Link>
+
+
                     {userInfo && (
                         <div>
                             <FiLogOut

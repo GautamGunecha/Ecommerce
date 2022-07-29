@@ -64,3 +64,10 @@
 .shopingCart:hover {
     color: rgb(72, 180, 39);
 }
+
+.cartLength {
+    margin-bottom: 8px;
+    display: flex;
+    gap: .2em;
+    font-family: monospace;
+}
