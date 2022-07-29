@@ -62,19 +62,18 @@ const CartItem = () =>
 
             await axios.post(`${url}/payment`, {
                 tokenId: stripeToken.id,
-                amount: total,
+                amount: total * 100,
             }, config)
                 .then(res =>
                 {
                     dispatch(emptyUserCart())
                     navigate('/success')
-                    console.log(res.data)
                 })
                 .catch(err => console.log(err))
         }
 
         stripeToken && makePayment()
-    })
+    }, [stripeToken])
     return (
         <div className='cartItem'>
             {cartItems.length !== 0 ?
