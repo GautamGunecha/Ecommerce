@@ -1,0 +1,57 @@
+.cartItem {
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 2em auto;
+    gap: 1em;
+}
+
+.cartProduct {
+    padding: 10px;
+    flex: .8;
+}
+
+.cartTotal {
+    border: 1px solid #ccc;
+    padding: 10px;
+    flex: .2;
+}
+
+.cartTotal h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.orderSummary {
+    margin-top: 1.5em;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.orderSummary p {
+    display: flex;
+    align-items: center;
+    margin-bottom: .8em;
+}
+
+.totalAmount {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cartTotal button {
+    width: 100%;
+    padding: 9px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    transition: 0.5s;
+}
+
+.cartTotal button:hover {
+    background-color: rgb(93, 92, 92);
+}

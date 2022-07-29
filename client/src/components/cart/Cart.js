@@ -3,6 +3,7 @@ import "./Cart.css";
 import Header from "../home/header/Header";
 import Footer from "../home/footer/Footer";
 import { FiShoppingBag } from "react-icons/fi";
+import CartItem from "./cartitems/CartItem";
 
 const Cart = () =>
 {
@@ -17,6 +18,7 @@ const Cart = () =>
         </div>
         <div className="cartBottom"></div>
       </div>
+      <CartItem />
       <Footer />
     </React.Fragment>
   );

@@ -31,7 +31,7 @@
     display: flex;
     align-items: center;
     margin-top: 1em;
-    gap: 1em;
+    gap: 4.5em;
 }
 
 .productPageSize p {
@@ -39,9 +39,9 @@
 }
 
 .productPageSize select {
-    width: 15%;
+    width: 30%;
     text-align: center;
-    padding: 2px;
+    padding: 8px;
     border: 1px solid #ccc;
 }
 
@@ -50,10 +50,26 @@
     font-size: 15px;
 }
 
+.productFunctions span {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
 
-.productPageFunctions button {
-    margin-top: 1.5em;
-    width: 39%;
+.icon {
+    cursor: pointer;
+}
+
+.productFunctions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8.5em;
+    margin-top: 1em;
+}
+
+.productFunctions button {
+    width: 30%;
     padding: 9px;
     cursor: pointer;
     background-color: #000;
@@ -63,6 +79,14 @@
     transition: 0.5s;
 }
 
-.productPageFunctions button:hover {
+.productFunctions button:hover {
     background-color: rgb(93, 92, 92);
+}
+
+.add:hover {
+    color: green;
+}
+
+.dec:hover {
+    color: red;
 }
