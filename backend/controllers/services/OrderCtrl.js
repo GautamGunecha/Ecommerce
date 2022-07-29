@@ -5,7 +5,6 @@ const asyncHandler = require("express-async-handler");
 const createOrder = asyncHandler(async (req, res) =>
 {
   const newOrder = new Order(req.body);
-
   try
   {
     const savedOrder = await newOrder.save();
