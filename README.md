@@ -4,7 +4,7 @@ Full Stack Ecommerce website with admin support to add products, modify specific
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/GautamGunecha/Ecommerce/blob/master/client/public/assets/Screenshot.png)
 
 ## Demo
 
