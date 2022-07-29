@@ -1,0 +1,29 @@
+.success {
+    width: 40%;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10em auto;
+}
+
+.success h1 {
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 20px;
+    color: green;
+}
+
+.checkIcon {
+    display: flex;
+    justify-content: center;
+    margin: 1em auto;
+    color: green;
+}
+
+.success p {
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 600;
+}

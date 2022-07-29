@@ -12,6 +12,7 @@ import Cart from '../components/cart/Cart';
 import ProductPage from '../components/products/items/ProductPage';
 import Male from '../components/products/category/male/Male';
 import Female from '../components/products/category/female/Female';
+import Success from '../components/success/Success';
 
 const MyRoutes = () =>
 {
@@ -41,6 +42,9 @@ const MyRoutes = () =>
                 {/* product category */}
                 <Route exact path="/men" element={<Male />} />
                 <Route exact path="/women" element={<Female />} />
+
+                {/* payment success */}
+                <Route exact path="/success" element={<Success />} />
 
             </Routes>
         </BrowserRouter>

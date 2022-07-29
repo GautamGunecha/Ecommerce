@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import "./CartItem.css"
 import { useSelector, useDispatch } from 'react-redux'
-import { removeFromCart } from '../../../redux/actions/services/cartAction'
+import { removeFromCart, emptyUserCart } from '../../../redux/actions/services/cartAction'
+import StripeCheckout from 'react-stripe-checkout';
+import axios from 'axios';
+import { url } from '../../../redux/utils/url';
+import { useNavigate } from 'react-router-dom'
+
+const PUBLISH_KEY = process.env.REACT_APP_STRIPE
 
 const CartItem = () =>
 {
@@ -10,9 +16,10 @@ const CartItem = () =>
     const cartItems = useSelector(state => state.cart.cartItems)
     const [subTotal, setSubTotal] = useState()
     const [total, setTotal] = useState()
+    const [stripeToken, setStripeToken] = useState(null);
 
     const dispatch = useDispatch()
-
+    const navigate = useNavigate()
 
     const totalAmount = () =>
     {
@@ -35,7 +42,39 @@ const CartItem = () =>
         e.preventDefault()
         alert('SignIn for checkout')
     }
-    useEffect(() => { totalAmount() })
+
+    const token = (token) =>
+    {
+        setStripeToken(token);
+    }
+
+    useEffect(() =>
+    {
+        totalAmount()
+        const makePayment = async () =>
+        {
+            const config = {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${userInfo.token}`,
+                },
+            };
+
+            await axios.post(`${url}/payment`, {
+                tokenId: stripeToken.id,
+                amount: total,
+            }, config)
+                .then(res =>
+                {
+                    dispatch(emptyUserCart())
+                    navigate('/success')
+                    console.log(res.data)
+                })
+                .catch(err => console.log(err))
+        }
+
+        stripeToken && makePayment()
+    })
     return (
         <div className='cartItem'>
             {cartItems.length !== 0 ?
@@ -70,7 +109,18 @@ const CartItem = () =>
                     </section>
                     {!userInfo ?
                         <button onClick={authError}>Checkout</button> :
-                        <button>Checkout</button>
+                        <StripeCheckout
+                            name='Mantra Store'
+                            image='https://avatars.githubusercontent.com/u/82008149?v=4'
+                            billingAddress
+                            shippingAddress
+                            description={`Total Amount ₹ ${total}`}
+                            amount={total * 100}
+                            stripeKey={PUBLISH_KEY}
+                            token={token}
+                        >
+                            <button>Checkout</button>
+                        </StripeCheckout>
                     }
                 </section>
                 : ""}
