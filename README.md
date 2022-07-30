@@ -1,6 +1,6 @@
 # Mantra Ecommerce
 
-Full Stack Ecommerce website with admin support to add products, modify specific products and monitor customer order with easy access.
+Full Stack Ecommerce website with admin support to add products, modify specific product and monitor customer order with easy access.
 
 ## Screenshots
 
