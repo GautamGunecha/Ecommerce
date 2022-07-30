@@ -12,7 +12,7 @@ https://mantracom.netlify.app
 
 ## License
 
-Anyone can use this project under fair use:
+Anyone can use this project under fair use.
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
