@@ -19,6 +19,7 @@ const MyRoutes = () =>
 {
     const userLogin = useSelector((state) => state.userLogin);
     const { userInfo } = userLogin;
+
     return (
         <BrowserRouter>
             <Routes>
@@ -48,8 +49,14 @@ const MyRoutes = () =>
                 <Route exact path="/success" element={<Success />} />
 
                 {/* Admin access */}
-                {userInfo.isAdmin ? <Route exact path='/admin' element={<Admin />} /> : <Route exact path='/' element={<Home />} />}
-
+                {!userInfo ?
+                    <Route exact path='/' element={<Home />} />
+                    :
+                    userInfo.isAdmin ?
+                        <Route exact path='/admin' element={<Admin />} />
+                        :
+                        <Route exact path='/' element={<Home />} />
+                }
             </Routes>
         </BrowserRouter>
     )
