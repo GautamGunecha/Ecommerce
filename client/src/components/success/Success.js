@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import "./Success.css"
 import { AiOutlineCheckCircle } from 'react-icons/ai'
-import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { useLocation } from "react-router-dom";
 import axios from 'axios';
 import { url } from '../../redux/utils/url';
+import { useHistory } from 'react-router-dom';
 
 const Success = () =>
 {
@@ -16,6 +16,7 @@ const Success = () =>
     const data = location.state.stripeData
     const cart = location.state.products
     const total = location.state.total
+    const history = useHistory()
 
     const [orderId, setOrderId] = useState(null);
 
@@ -51,6 +52,11 @@ const Success = () =>
         data && createOrder();
 
     }, [cart, data, userInfo, total])
+
+    const redirectToHome = () =>
+    {
+        history('/')
+    }
     return (
         <>
             {orderId ? <div className='success'>
@@ -59,10 +65,8 @@ const Success = () =>
                 <p>Thank You!</p>
                 <p>Order id - {orderId}</p>
                 <span>check mail for more details.</span>
-                <button>
-                    <Link to='/'>
-                        Go to Home Page.
-                    </Link>
+                <button onClick={() => redirectToHome()}>
+                    Go to Home Page.
                 </button>
             </div> : ""}
         </>
