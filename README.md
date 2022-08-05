@@ -1,6 +1,6 @@
 # Mantra Ecommerce
 
-Full Stack Ecommerce website with admin support to add products, modify specific products and monitor customer order with easy access.
+Full Stack Ecommerce website with admin support to add products, modify specific product and monitor customer order with easy access.
 
 ## Screenshots
 
@@ -12,7 +12,7 @@ https://mantracom.netlify.app
 
 ## License
 
-Anyone can use this project under fair use:
+Anyone can use this project under fair use.
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
