@@ -13,6 +13,7 @@ import ProductPage from '../components/products/items/ProductPage';
 import Male from '../components/products/category/male/Male';
 import Female from '../components/products/category/female/Female';
 import Success from '../components/success/Success';
+import Admin from '../admin/Admin';
 
 const MyRoutes = () =>
 {
@@ -45,6 +46,9 @@ const MyRoutes = () =>
 
                 {/* payment success */}
                 <Route exact path="/success" element={<Success />} />
+
+                {/* Admin access */}
+                {userInfo.isAdmin ? <Route exact path='/admin' element={<Admin />} /> : <Route exact path='/' element={<Home />} />}
 
             </Routes>
         </BrowserRouter>
