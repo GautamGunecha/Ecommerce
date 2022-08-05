@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { useLocation } from "react-router-dom";
 import axios from 'axios';
 import { url } from '../../redux/utils/url';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Success = () =>
 {
@@ -16,7 +16,7 @@ const Success = () =>
     const data = location.state.stripeData
     const cart = location.state.products
     const total = location.state.total
-    const history = useHistory()
+    const navigate = useNavigate()
 
     const [orderId, setOrderId] = useState(null);
 
@@ -55,7 +55,7 @@ const Success = () =>
 
     const redirectToHome = () =>
     {
-        history('/')
+        navigate('/')
     }
     return (
         <>
