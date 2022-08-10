@@ -57,3 +57,30 @@
     color: green;
     font-weight: 500;
 }
+
+/* Mobile Responsive News */
+
+@media only screen and (max-width: 600px) {
+    .newsLetter {
+        width: 100%;
+    }
+
+    .newsLetter h1 {
+        font-size: 20px;
+    }
+
+    .newsLetter p {
+        font-size: 12px;
+        margin: 1em 1em;
+    }
+
+    .newsLetter input {
+        padding: 8px;
+        width: 40em;
+    }
+
+    .newsLetter button {
+        padding: 7px;
+    }
+
+}

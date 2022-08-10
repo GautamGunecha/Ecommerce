@@ -22,3 +22,12 @@
   margin-top: 2%;
   font-size: 12px;
 }
+
+
+/* Mobile Responsive View */
+
+@media only screen and (max-width: 600px) {
+  .coursel {
+    display: none;
+  }
+}

@@ -47,3 +47,25 @@
     background-color: #414040;
     color: #ffffff;
 }
+
+/* mobile responsive */
+
+@media only screen and (max-width: 600px) {
+    .hero {
+        width: 100%;
+    }
+
+    .heroSale p {
+        font-size: 18px;
+    }
+
+    .heroHeader p {
+        font-size: 25px;
+    }
+
+    .heroContent p {
+        width: 70%;
+        text-align: justify;
+    }
+
+}

@@ -71,3 +71,45 @@
     gap: .2em;
     font-family: monospace;
 }
+
+/* Mobile Responsive Website */
+
+.header-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        display: none;
+    }
+
+    .header-mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 63px;
+    }
+
+    .header-mobile p {
+        font-size: 20px;
+        font-family: monospace;
+    }
+
+    .header-mobile-nav {
+        width: 61%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1em;
+        font-size: 19px;
+        font-family: monospace;
+    }
+
+    .header-mobile-nav span {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+}

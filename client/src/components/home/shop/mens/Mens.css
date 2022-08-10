@@ -25,3 +25,18 @@
 .womens-img:hover {
     border: 1px solid pink;
 }
+
+/* Mobile Responsive */
+
+@media only screen and (max-width: 600px) {
+    .mens-category {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+    }
+
+    .mens-category img {
+        width: 90%;
+    }
+}
