@@ -122,3 +122,21 @@
 .registrationFormShowPasswordIcon {
   cursor: pointer;
 }
+
+/* Mobile Responsive Register */
+
+@media only screen and (max-width: 600px) {
+  .registrationForm {
+    width: 95%;
+    margin-bottom: 17.5em;
+  }
+
+  .registrationForm input {
+    padding: 8px;
+  }
+
+  .registrationForm button {
+    padding: 9px;
+  }
+
+}

@@ -49,7 +49,9 @@ const Reset = () =>
             <Link to="/">
                 <h1>Mantra.</h1>
             </Link>
-            <form onSubmit={onSubmit} className="resetPasswordForm">
+            <form
+                onSubmit={onSubmit}
+                className="resetPasswordForm">
                 {msg && <p style={{ marginTop: "2%", color: "green" }}>{msg.msg}</p>}
                 <p style={{ marginTop: "2%", color: "red" }}>{err}</p>
                 <p>Reset Password</p>

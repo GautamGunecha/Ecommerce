@@ -55,3 +55,7 @@ a {
   font-style: normal;
   text-decoration: none;
 }
+
+/* Mobile Responsive Reset */
+
+@media only screen and (max-width: 600px) {}
