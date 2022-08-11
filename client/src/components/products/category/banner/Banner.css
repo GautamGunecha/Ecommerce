@@ -34,3 +34,19 @@
     background-color: transparent;
     transition: 0.5s;
 }
+
+/* Mobile Responsive Banner */
+
+@media only screen and (max-width: 600px) {
+    .banner {
+        width: 100%;
+    }
+
+    .banner section {
+        width: 100%;
+    }
+
+    .banner section button {
+        width: 60%;
+    }
+}

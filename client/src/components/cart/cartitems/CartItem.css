@@ -94,3 +94,24 @@
 .cartProducts button:hover {
     background-color: rgb(195, 44, 44);
 }
+
+@media only screen and (max-width: 600px) {
+    .cartItem {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .cartProducts img {
+        width: 45%;
+    }
+
+    .cartProducts {
+        gap: 2em;
+    }
+
+    .cartProducts p {
+        margin-bottom: .9em;
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
