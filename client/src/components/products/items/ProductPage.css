@@ -90,3 +90,38 @@
 .dec:hover {
     color: red;
 }
+
+/* Mobile Responsive Product Page */
+
+@media only screen and (max-width: 600px) {
+    .productPage {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .productPage img {
+        object-fit: contain;
+        width: 75%;
+    }
+
+    .productFunctions {
+        justify-content: space-between;
+        gap: 8.5em;
+    }
+
+    .productFunctions button {
+        width: 30%;
+        padding: 9px;
+        font-size: 14px;
+    }
+
+    .productPageSize {
+        justify-content: space-between;
+    }
+
+}
