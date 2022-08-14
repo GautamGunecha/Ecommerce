@@ -57,6 +57,7 @@ const Success = () =>
     {
         navigate('/')
     }
+
     return (
         <>
             {orderId ? <div className='success'>
@@ -65,7 +66,7 @@ const Success = () =>
                 <p>Thank You!</p>
                 <p>Order id - {orderId}</p>
                 <span>check mail for more details.</span>
-                <button onClick={() => redirectToHome()}>
+                <button onClick={redirectToHome}>
                     Go to Home Page.
                 </button>
             </div> : ""}
