@@ -18,6 +18,7 @@
     "express-rate-limit": "^6.4.0",
     "googleapis": "^105.0.0",
     "helmet": "^5.1.0",
+    "heroku": "^7.62.0",
     "hpp": "^0.2.3",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.4.6",
