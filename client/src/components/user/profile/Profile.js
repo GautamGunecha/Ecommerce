@@ -6,9 +6,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { updateProfile } from "../../../redux/actions/auth/authAction";
 import Orders from "../orders/Orders";
+import AddProduct from "../../../admin/add/AddProduct";
+import CustomerOrder from "../../../admin/customerOrder/CustomerOrder";
 
-const Profile = () =>
-{
+const Profile = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [avatar, setAvatar] = useState();
@@ -21,24 +22,19 @@ const Profile = () =>
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
-  useEffect(() =>
-  {
-    if (!userInfo)
-    {
+  useEffect(() => {
+    if (!userInfo) {
       navigate("/");
-    } else
-    {
+    } else {
       setName(userInfo.name);
       setEmail(userInfo.email);
       setAvatar(userInfo.avatar);
     }
   }, [navigate, userInfo]);
 
-  const postDetails = (pics) =>
-  {
+  const postDetails = (pics) => {
     setAvatarMessage(null);
-    if (pics.type === "image/jpeg" || pics.type === "image/png")
-    {
+    if (pics.type === "image/jpeg" || pics.type === "image/png") {
       const data = new FormData();
       data.append("file", pics);
       data.append("upload_preset", process.env.REACT_APP_CLOUD_PRESET);
@@ -48,23 +44,19 @@ const Profile = () =>
         body: data,
       })
         .then((res) => res.json())
-        .then((data) =>
-        {
+        .then((data) => {
           setAvatar(data.url.toString());
           console.log(avatar);
         })
-        .catch((err) =>
-        {
+        .catch((err) => {
           console.log(err);
         });
-    } else
-    {
+    } else {
       return setAvatarMessage("Please Select an Image");
     }
   };
 
-  const submitHandler = (e) =>
-  {
+  const submitHandler = (e) => {
     e.preventDefault();
 
     dispatch(updateProfile({ name, email, password, avatar }));
@@ -125,6 +117,8 @@ const Profile = () =>
         <h1>Order History</h1>
       </div>
       <Orders />
+      {userInfo ? userInfo.isAdmin && <AddProduct /> : ""}
+      {userInfo ? userInfo.isAdmin && <CustomerOrder /> : ""}
       <Footer />
     </React.Fragment>
   );

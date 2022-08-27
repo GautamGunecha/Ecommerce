@@ -1,0 +1,35 @@
+.updateProduct h1 {
+    font-size: 20px;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.updateProduct form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.updateProduct form section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+}
+
+.updateProduct form input {
+    padding: 8px;
+    width: 60%;
+}
+
+
+
+.updateProduct form button {
+    padding: 8px;
+    width: 100%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #000;
+}

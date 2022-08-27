@@ -91,6 +91,28 @@
     color: red;
 }
 
+.admin-update {
+    border-top: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.admin-update p {
+    font-size: 18px;
+}
+
+.admin-update button {
+    padding: 8px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+    border: none;
+}
+
+
 /* Mobile Responsive Product Page */
 
 @media only screen and (max-width: 600px) {

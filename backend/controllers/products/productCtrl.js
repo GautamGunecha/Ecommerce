@@ -14,14 +14,14 @@ const addProduct = asyncHandler(async (req, res) => {
 
 const editProduct = asyncHandler(async (req, res) => {
   try {
-    const updateProduct = await Product.findByIdAndUpdate(
+    await Product.findByIdAndUpdate(
       req.params.id,
       {
         $set: req.body,
       },
       { new: true }
     );
-    return res.status(200).json(updateProduct);
+    return res.status(200).json({ msg: "Product Updated Success!" });
   } catch (error) {
     return res.status(400).json({ msg: error });
   }
