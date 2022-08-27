@@ -11,7 +11,7 @@ const {
 const { protect, adminVerification } = require("../../middlewares/auth/auth");
 
 router.post("/placed", protect, createOrder);
-router.get("/update/:id", protect, updateOrder);
+router.put("/update/:id", protect, updateOrder);
 router.delete("/delete/:id", protect, deleteOrder);
 router.get("/find/:userId", protect, getOrder);
 
